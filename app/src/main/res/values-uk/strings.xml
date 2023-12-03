@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="current_locale">UK</string>
+    <string name="header">Український заголовок</string>
+    <string name="main_text">Текст українською</string>
+    <string name="app_name">lab1</string>
+    <string name="change_locale">Змінити мову</string>
+    <string name="current_locale_label">Встановлена локалізація: </string>
+</resources>

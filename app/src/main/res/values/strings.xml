@@ -1,0 +1,8 @@
+<resources>
+    <string name="current_locale">EN</string>
+    <string name="header">English header</string>
+    <string name="main_text">Text in english</string>
+    <string name="app_name">lab1</string>
+    <string name="change_locale">Change language</string>
+    <string name="current_locale_label">Current locale: </string>
+</resources>
