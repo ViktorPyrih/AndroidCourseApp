@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.lab2.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_myFragment"
+            app:destination="@id/nav_my_fragment" />
+        <action
+            android:id="@+id/action_nav_home_to_tabbedActivity"
+            app:destination="@id/nav_tabbed_activity" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_my_fragment"
+        android:name="com.example.lab2.ui.myFragment.MyFragment"
+        android:label="fragment_my"
+        tools:layout="@layout/fragment_my" >
+        <action
+            android:id="@+id/action_myFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <activity
+        android:id="@+id/nav_tabbed_activity"
+        android:name="com.example.lab2.TabbedActivity"
+        android:label="activity_tabbed"
+        tools:layout="@layout/activity_tabbed" />
+
+</navigation>
