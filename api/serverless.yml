@@ -1,0 +1,45 @@
+service: proj-api
+
+frameworkVersion: '3'
+
+package:
+  individually: true
+  include:
+  - index.ts
+
+provider:
+  profile: LOCAL-USE-ONLY
+  name: aws
+  runtime: nodejs18.x
+
+custom:
+  serverless-offline:
+    host: 0.0.0.0
+    httpPort: 3034
+    useChildProcesses: true
+    reloadHandler: true
+  esbuild:
+    exclude: ['pg-native', 'superagent-proxy']
+
+functions:
+  get-products:
+    handler: src/get-products/index.index
+    timeout: 60
+    events:
+      - http:
+          path: products
+          method: GET
+          cors: true
+
+  get-staff:
+    handler: src/get-staff/index.index
+    timeout: 60
+    events:
+      - http:
+          path: staff
+          method: GET
+          cors: true
+
+plugins:
+  - serverless-esbuild
+  - serverless-offline
